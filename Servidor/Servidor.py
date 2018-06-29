@@ -98,10 +98,6 @@ def main():
 
 			socketConexao.close()
 
-			# Gravando no log de conexões.
-			#HISTORICODELOG = "\n[{0} - {1}]: {2}".format(ObtemData(), ObtemHora(), "Conexão finalizada!")
-			#GeraLog(HISTORICODELOG, historicoConexao)
-
 
 		except (socket.herror, socket.gaierror, socket.error):
 			historicoConexao = "\n[{0} - {1}]: {2}".format(ObtemData(), ObtemHora(), "Erro ao Estabelecer Conexao.")
@@ -211,8 +207,7 @@ def ChecaDiretorio(diretorio):
 		logDeConexao = "{0}{1}{2}".format("log", ObtemSeparadorDeArquivo(), "Conexao.log")
 		
 		logData = "\n[{0} - {1}]: Criação do diretorio: {2}".format(ObtemData(), ObtemHora(), diretorio)
-		#GeraLog(LOGDECONEXAO, logData)
-
+		
 	return True
 
 '''
